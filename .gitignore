@@ -1,0 +1,4 @@
+public/vendor/
+node_modules/
+custom_configs/*
+dist/

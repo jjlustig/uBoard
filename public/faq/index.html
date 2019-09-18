@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+	<title>uBoard FAQ</title>
+</head>
+<body>
+<header>
+	<h1>uBoard FAQ</h1>
+</header>
+<section class="cd-faq">
+	<ul class="cd-faq-categories">
+		<li><a class="selected" href="#basics">Basic Controls</a></li>
+		<li><a href="#tech">Technical Specs</a></li>
+		<li><a href="#privacy">Privacy and Security</a></li>
+		<li><a href="#back">Back to UBoard</a></li>
+
+	</ul>
+
+	<div class="cd-faq-items">
+		<ul id="basics" class="cd-faq-group">
+			<li class="cd-faq-title"><h2>Basic Controls</h2></li>
+			<div class="cd-faq-content">
+			</div> 
+			<li>
+				<a class="cd-faq-trigger" href="#0">Navigation Features</a>
+				<div class="cd-faq-content">
+					<img class="picture" src="images/navigation.png" align ='top'>
+				</div> 
+			</li> 
+			<li>
+				<a class="cd-faq-trigger" href="#0">Main Interface</a>
+				<div class="cd-faq-content">
+					<img class="picture" src="images/main_screen.png" align ='top'>
+				</div> 
+			</li> 
+			<li>
+				<a class="cd-faq-trigger" href="#0">Default iOS Interface</a>
+				<div class="cd-faq-content">
+					<img class="picture" src="images/default_screen.png" align ='top'>
+				</div> 
+			</li> 
+			<li>
+				<a class="cd-faq-trigger" href="#0">Hotkeys Interface</a>
+				<div class="cd-faq-content">
+					<img class="picture" src="images/hotkeys.png" align ='top'>
+				</div> 
+			</li> 
+			<li>
+				<a class="cd-faq-trigger" href="#0">New Board Interface</a>
+				<div class="cd-faq-content">
+					<img class="picture" src="images/new_keyboard.png" align ='top'>
+				</div> 
+			</li> 
+			<li>
+				<a class="cd-faq-trigger" href="#0">Edit Keys</a>
+				<div class="cd-faq-content">
+					<img class="picture" src="images/edit_keys.png" align ='top'>
+				</div> 
+			</li> 
+		</ul> <!-- cd-faq-group -->
+
+		<ul id="tech" class="cd-faq-group">
+			<li class="cd-faq-title"><h2>Technical Specs</h2></li>
+			<li>
+				<a class="cd-faq-trigger" href="#0">How uBoard Works</a>
+				<div class="cd-faq-content">
+					<img class="picture" src="images/overview.png" align ='top'>
+					<br>
+					<p>uBoard works by connecting your mobile device to a local server on your desktop. When you launch the uBoard app on your desktop, the local server starts up on port 8000. When you scan the QR code, your mobile device connects to your computer and launches a web browser to display the interface. When you interact with the mobile interface, your mobile device sends websocket signals to your computer. The server receives these signals and translates them into computer commands. </p>
+				</div>
+			</li>
+		</ul> <!-- cd-faq-group -->
+
+		<ul id="privacy" class="cd-faq-group">
+			<li class="cd-faq-title"><h2>Privacy</h2></li>
+			<li>
+				<a class="cd-faq-trigger" href="#0">Desktop Password Feature</a>
+				<img class="picture" src="images/desktop_password.png" align ='top'>
+			</li>
+		</ul> <!-- cd-faq-group -->
+
+		<ul id="back" class="cd-faq-group">
+			<li class="cd-faq-title"><h2>Back To uBoard</h2></li>
+			<li>
+        		<a class="btn btn-primary" href="../../"> Back to UBoard </a>  
+			</li>
+		</ul> <!-- cd-faq-group -->
+
+	</div> <!-- cd-faq-items -->
+	<a href="#0" class="cd-close-panel">Close</a>
+</section> <!-- cd-faq -->
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/jquery.mobile.custom.min.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="public/vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/vendor/bootstrap-material-design/dist/css/ripples.min.css">
+    <link rel="stylesheet" href="public/vendor/bootstrap-material-design/dist/css/material.min.css">
+
+    <link rel="stylesheet" href="public/style/main.css">
+    <link rel="stylesheet" href="public/style/gradient.css">
+
+    <title>UBoard</title>
+  </head>
+  <body>  
+
+    <div class="wrapper">
+      <div class="touchpad" id="touchpad">
+        <div class="touchpad" id="leftClick"><span class="glyphicon glyphicon-move"> </div>
+        <div class="touchpad" id="scrollWheel"><!--<span class="glyphicon glyphicon-sort">--><span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQkSURBVGhD7dp/6E9XHMfxL0aI5MdokZBfES1TUxMjRH4mpYQiv7JZyR9DC8XCWCv5MUrKry0hheQfmvVl2UL5tRKmzCKN+VF+judL3Xo7nfv5fM793Pu5n+RVj/LVveeecz/nnns+53xqUkwjDMcqHMV13MMrPMQ/+AWbMBEtUVXpjh9xH6p0qZ7hAAYj13yEXXgJX0VD1OITVDyT8R98lYo8wJ/4AxdwB77jIrohK/EBMk89qI/7KvIE6ipT0B6+tMBobMG/8JXzK3RcZlEj9sC9sO7kNvgq3xfrMe3NX2+nCZZBA4Fb5kV8iNRTB9vhXlBdphd8+RSPER27EL60gT5JW66cQzOkmvlwL3QITeGLGuc+E//D98kodfEtdIw9Zy9Sy8d4CnuBn6Cu5ktn3II9PvIC4xGXr+CeMwNlR11KQ6Mt+DQaw5d2uAF7vEs3ZQjishn2+Lso+3kZB1uoXnqqrC8NoOHWHh9Hz05X+KJyfoc9fg3KyinYAhcjLhq17LHFzEZcPoc9ViNbcyRKT9jC/kZcl1Lq4zJ0rN4peuvb8w9D8y39WxWL+0SiaDCx5xdqeMEshy2o0KcRRRPHSeiBkbDn663dGlOh6U2xDIQ9/xgSxX3IOyIkvoaERAPNTUTn61PWjQqK5jt2yL2KUqKh9wfMgztQqCGavu/GBJSSHbBlfIagdIEtYB+KRXdQDY7OsXfT/VsvPr2fisV9EU9HUAbAFlDK8KeP/TnseYWMQbGMhT3nGwTF7d+lFqBphj0vzkk0RLG4D/xqBMVtSNyEz4261wrYc13HETdHc9Mf9tyNCErShkTRw+775ngQISNP7g1RZsKWoYUHvTRDUhUNURbhCn5DN/1HYKqmIeUm9Ybsx6wcfAdbj7IbUi3eN6TavH9GIu/MqKX3QR5xG/I9gqIVcluAtgryyCjYeixFUHrDFrATeWQObD3mIiia2NlJ31nkkQ2wDSm0HhYbretGBahRma6Qx0SL2bYOiXa5tIoeFSKazVYyWomx10/cKwbBFnQG+uJUqbg3MvhrbhStkP8FW5jWrCoRrcZojzG6rrpV6HLUW/kStiHXELy2lCBatbHX/RllRZV2V9ezHoo1xNrr6ZPR81J23CUZ+RpZRM+luxej+VZq2QpbuPqs1oLTfPj1FtdOsL2ORqpUu7JW4fW9215E1HcLrdCXEg0qmsvZF7Bo604PferRrlG0bWBpm03bY0n2x4dCw7pbpj4ZbaZmllbQ1pt7YdFu1QJ0QqGoDG0taKHOV472UPog82ip093nc2mkOwL9MGAtdLyG1Etwu5B1Am1R0QyD1qx8FQqlXxF9AT0vuUQrh9o71532VbCY21iCxPuDWUS/7tF2XS0ewVdxvdzOYx1GIG6vvqqivq7NnH5QIzsgo1/+1NS8BnyN3ChEGkWcAAAAAElFTkSuQmCC"></span></div> 
+        <div class="touchpad" id="rightClick"><span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPDSURBVGhD7dpZyA1/HMfxxy5biCiRvzV7si8XtgsXSMQFigspFBeSPVvhAsWFNTeKkhIShSLLjTWSolwga0hEdv/3R8/Ut19z5pzfzG+ecy6eT72Seeb5znybmd+Z8/s9VRWYJfiGFxiiDeVMc7RFK9TXBo98xt9qp7XBST10qf43aFpjDg7hLr4iOhH5g6c4h1UYiKTY372qDSYd8RD62QO0ROYMxjHoNrAHL4VOYjEaw40aj/a7og3VURNPYOvMQup0xknYgmnpOdDVrIMouqrRz3dqA2mGx7C/+wvFrm7BzMcX2IKu1zHbijkLPVNKV+zHNjTRBjIJdn9dtYXwjh6sg7DFIt9xBFPQDv0Qt18xz9EXcdFdED17mZo4DvfAP7AV7WGTthH5gKGIyyBswJh//0sRjUbuAW+jP+KSpRF5i24ImkVwD6SxPW60iZK1EbmP6Pmw0aAwF3p+ZDX0TCWmJ9yhVcNtAyQlRCOyC25WwN1PV7AFCuYC7C/cQdKViBKqkbjh9QTi9i04DI+D3fETeqCUhGpEzsBmIn7C7qNP/4KvQXqdsDuvR6kJ2YiGWtWz6YDxmAC9XRR859KrwG9ExT7C550mZCOyHamyFLZQ9JpQakI38gypouHVFhoLn4RuRLrDOy8RFdB3g0bwSR6NzIZXNB7bAjfgmzwa2Qiv6BLaAqfgmzwa2Qev6IPFFtAbr2/yaERv114ZDVtgD3xT20iC2kYil7HAk0YYWyOEzI1UitpGKk1ZnpEQVsKeR+ZG0oxaIdIJ9jy8G9GUiy1Qrkb+gz0P70Y04WALHEY5MgD2PA7AK5pZtwUuoRxxp0i3wDvvEBXQVIudYK6paL7KNjIP3jkPW6QPajruVFShWc3EuEOfzwxKiLSB5pWj479BqrtC81e2Ec2SlzIxFyrubaUlhtS5DltsOWoiuhqafrLHHonUmQZbTNP9GtHyjuZ77XGvIVPq4hZs0YsIvpJqMhV2/VB8p6JiMwyaSLaFdyOP6MuYXZaWowiWzbDFRZffd+08KaPgrjtqOTvoraxbSQuV9iCiz5oQB9LiqrsGo8XWQstvmaKVI3cUk/dYhjRD83DoK4JbUwurk5FbmiLuyogmmdehF5KiWcyZ0Nyy+1CL1mC0XJB7dJttgl1ycL2CXi80sadZ/L3Qct09uAOHpT8SSDVRnSW6LbQMF3dCvrR2vgYNUZboc2YGbiLuBIvRB+wO6A8MKia9sRb67uK+XkR0Wz2CviBNh+9SRVmiv4TQa/cI6KuzFv9zvnWqqv4H+9yZYR0wlL0AAAAASUVORK5CYII="></span> </div> 
+        <div class="touchpad" id="mousepad"> </div> 
+      </div>
+      
+      <div class="swiper-container">
+        <div class="swiper-wrapper"> 
+          <div class = "keyboard swiper-slide swiper-slide-outer" id="keyboard"> </div>
+          <div class = "numpad swiper-slide  swiper-slide-outer" id="numpad"> </div>
+          <div class = "textfield swiper-slide swiper-slide-outer" id="textfieldcontainer">
+            <textarea class= "textfield" id="textfield" type="text" placeholder="Type here and press enter to send to desktop"></textarea>
+          </div>
+          <div class = "hotkeys swiper-slide  swiper-slide-outer" id="hotkeys"> </div>
+          <div class="swiper-slide swiper-slide-outer">
+            <select id="customSelect">
+            </select>
+            <div class="swiper-container-inner">
+              <div class="swiper-wrapper" id="custom-container">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class = "loading" id="loading">Loading...</div>
+        <div class = "static-bar">
+          <div class = "shift-toggle static-key static-key-default" id = "shift-toggle"> shift </div> 
+          <div class = "ctrl-toggle static-key static-key-default" id = "ctrl-toggle"> ctrl </div> 
+          <div class = "spacebar static-key static-key-default" id = "spacebar"> space </div>
+          <div class = "go-toggle static-key static-key-default" id = "go-toggle"> Go </div>  
+          <div class = "backspace static-key static-key-default" id = "backspace"> del </div> 
+        </div>
+      </div>
+
+      <div class = "navbar" id="navbar">
+        <div class = "icon-selection" id="s0">
+          <i class="material-icons">keyboard</i>
+        </div>
+        <div class = "icon-selection" id="s1">
+          <i class="material-icons">grid_on</i>
+        </div>
+        <div class = "icon-selection" id="s2">
+          <i class="material-icons">smartphone</i>
+        </div>
+        <div class = "icon-selection" id="s3">
+          <i class="material-icons">link</i>
+        </div>
+        <div class = "icon-selection" id="s4">
+          <i class="material-icons">build</i>
+        </div>
+        <div class = "icon-selection" id="swap">
+          <i class="material-icons">swap_vert</i>
+        </div>
+        <div class = "icon-selection" id= "settings-select">
+          <i class="material-icons">settings</i>
+        </div>
+      </div>
+
+    </div>
+
+     <!-- Setting Modal -->
+    <div id="myModal" class="modal">
+
+      <div id="modal-content" class="modal-content">
+
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <a class="btn btn-primary" href="/public/faq"> Help Page </a>  
+         <button class="password-button" id="passcode"><i class="mdi-notification-vpn-lock"></i> PassCode</a></button>
+        <br>
+        <button class="settings-button" id="new-keyboard"> New Keyboard </button>
+        <button class="settings-button" id="delete-keyboard"> Delete Keyboard </button>
+        <button class="settings-button" id="add-key"> Add Key </button>
+        <div id="edit-wrapper">
+          <input id="edit-toggle" type="checkbox" data-toggle="toggle" data-onstyle="success" data-offstyle="danger">
+          <label id = "edit-label">
+          Edit Toggle
+          </label>
+        </div>
+      </div>
+
+    </div>
+
+      <!-- Edit Modal -->
+      <div id="edit-modal" class="modal">
+
+        <div class="modal-header">
+          <h4 class="modal-title">Change Input</h4>
+          <h4 class="modal-alt">Alt Text (Optional)</h4>
+        </div>
+        <div id="modal-body">
+          <p class='modal-title'><input type="text" class="inputText" id="inputText" value=""></p>
+          <p class='modal-alt'><input type="text" class="inputText" id="altText" value=""></p>
+        </div>
+        <div class = "save" id="modal-save">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Save</button>
+        </div>
+        <div id="modal-close">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+
+     </div>
+
+     <!-- New Board Modal -->
+      <div id="newBoard-modal" class="modal">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Name Board</h4>
+        </div>
+        <div id="newBoard-modal-body">
+          <p><input type="text" class="inputText" id="inputBoardName" value=""></p>
+        </div>
+        <div class = "save" id="newBoard-save">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Save</button>
+        </div>
+     </div>
+       
+
+    <script defer src="/public/vendor/jquery/dist/jquery.min.js"></script>
+    <script defer src="/public/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script defer src="/public/vendor/bootstrap-material-design/dist/js/ripples.min.js"></script>
+    <script defer src="/public/vendor/bootstrap-material-design/dist/js/material.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/interact.js/1.2.8/interact.min.js"></script>
+    <script defer src="/socket.io/socket.io.js"></script>
+    <script defer src="/public/vendor/hammerjs/hammer.min.js"></script>
+    <script defer src="/public/vendor/swiper/dist/js/swiper.min.js"></script>
+    <script defer src="/public/vendor/favicon/favicon.js"></script>
+    <link href="/public/vendor/bootstrap-toggle/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <script defer src="/public/vendor/bootstrap-toggle/js/bootstrap-toggle.min.js"></script>
+    <script defer src="/public/js/client.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  </body>
+</html>
+

@@ -1,0 +1,47 @@
+<DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>UBoard</title>
+    <link rel="stylesheet" href="public/vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/vendor/bootstrap-material-design/dist/css/ripples.min.css">
+    <link rel="stylesheet" href="public/vendor/bootstrap-material-design/dist/css/material.min.css">
+    <link rel="stylesheet" href="public/style/main.css">
+  </head>
+  <body fullbleed unresolved class="hidden">
+    <header class="navbar navbar-inverse navbar-fixed-top shadow-z-2" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle pull-left" data-toggle="collapse" data-target="#pushMenu">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#" data-l10n-id="projectName">UBoard</a>
+      </div>
+      <div class="collapse navbar-collapse" id="pushMenu">
+        <ul class="nav navbar-nav">
+          <li><a href="#" id="passcode"><i class="mdi-notification-vpn-lock"></i> Pass Code</a></li>
+        </ul>
+      </div>
+    </header>
+    <section id="content" class="well">
+      
+      <!-- Add your site or application content here -->
+      <h3 data-l10n-id="hello">Open Mobile browser with</h3>
+      <p id="desc" data-l10n-id="info_static"></p>
+      <div id="qrcode"></div>
+    </section>
+
+    <!-- external libraries -->
+    <script defer src="public/vendor/jquery/dist/jquery.min.js"></script>
+    <script defer src="public/vendor/jquery-qrcode/jquery.qrcode.min.js"></script>
+    <script defer src="public/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script defer src="public/vendor/bootstrap-material-design/dist/js/ripples.min.js"></script>
+    <script defer src="public/vendor/bootstrap-material-design/dist/js/material.min.js"></script>
+    <script defer src="public/js/main.js"></script>
+    <script defer src="public/js/desktop.js"></script>
+  </body>
+</html>
+
+
